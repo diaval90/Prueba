@@ -1,0 +1,11 @@
+{% extends 'base.html' %}
+{% block content %}
+<div class="container">
+<h4 align="center">Agregar Persona</h4>
+	<form action="." method="POST" class="PersonaForm">
+		{% csrf_token %}
+		{{ form.as_p }}
+		<button type="submit" class="save btn btn-default orange darken-4">Registrar</button>
+	</form>
+</div>
+{% endblock %}
